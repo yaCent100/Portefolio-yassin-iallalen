@@ -1034,6 +1034,7 @@ section,
 
 .testimonials .swiper-wrapper {
   height: auto;
+  width: 100%;
 }
 
 .testimonials .swiper-pagination {

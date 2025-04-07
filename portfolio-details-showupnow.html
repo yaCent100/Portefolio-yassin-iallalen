@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Projet - Le Grand Bazar</title>
+  <title>Portfolio Projet - ShopUpNow</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -98,7 +98,7 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Projet - Le Grand Bazar</h1>
+        <h1 class="mb-2 mb-lg-0">Projet - ShopUpNow</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
@@ -134,19 +134,19 @@
                 }
               </script>
 
-              <div class="swiper-wrapper align-items-center" id="imageSlider-gb">
+              <div class="swiper-wrapper align-items-center" id="imageSlider-theatre">
 
                 <script>
-                  const container = document.getElementById('imageSlider-gb');
+                  const container = document.getElementById('imageSlider-theatre');
 
-                  for (let i = 1; i <= 11; i++) {
+                  for (let i = 1; i <= 5; i++) {
                     // Créer une nouvelle div pour chaque slide
                     const slide = document.createElement('div');
                     slide.classList.add('swiper-slide');
 
                     // Créer une balise img pour chaque image
                     const img = document.createElement('img');
-                    img.src = `assets/img/legrandbazar/gb-${i}.png`; // Chemin dynamique de l'image
+                    img.src = `assets/img/shopupnow/theatre-${i}.png`; // Chemin dynamique de l'image
                     img.alt = `Image ${i}`;
 
                     // Ajouter une classe CSS pour contrôler l'apparence
@@ -159,6 +159,7 @@
                     container.appendChild(slide);
                   }
                 </script>
+
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -168,46 +169,63 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong>: Application Web</li>
-                <li><strong>Client</strong>: School</li>
-                <li><strong>Project date</strong>: 2022 - 2023</li>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
                 <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-                <li><strong>Langage de Programmation</strong>: PHP</li>
-                <li><strong>Technologies Utilisées</strong>: Symfony, HTML, CSS, Twig, Bootstrap, MySQL</li>
               </ul>
             </div>
 
           </div>
 
         </div>
-
         <div class="row gy-4">
           <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-            <h2>Projet de développement web avec Symfony</h2>
+            <h2>ShopUpNow - Application de vente de tickets de théâtre en ligne</h2>
             <p>
-              Ce projet a été réalisé dans le cadre de mon cours de développement web. L’objectif était de concevoir et
-              développer une application web complète en utilisant le langage PHP. Nous avions la liberté de choisir un
-              framework, j’ai donc opté pour <strong>Symfony</strong> afin de profiter de sa structure robuste et de ses
-              bonnes pratiques de développement.
+              <strong>ShopUpNow</strong> est une application web innovante permettant aux utilisateurs d'acheter des
+              tickets de théâtre pour des événements en ligne. Le projet a été conçu pour faciliter la réservation de
+              billets en permettant aux utilisateurs de découvrir des spectacles, de consulter les horaires, et
+              d'acheter des tickets en quelques clics.
             </p>
             <p>
-              Le projet a été entièrement conçu en suivant une approche full stack. Le front-end a été développé avec
-              <strong>HTML</strong>, <strong>CSS</strong>, <strong>Bootstrap</strong> pour un design responsive, et
-              <strong>Twig</strong> pour le templating. Côté back-end, j’ai utilisé <strong>Symfony</strong> avec une
-              base de données <strong>MySQL</strong>, permettant une gestion dynamique des données et des utilisateurs.
+              Le système est équipé d'un moteur de <strong>géolocalisation</strong> pour permettre aux utilisateurs de
+              trouver des événements proches de leur position, ainsi que de <strong>Thymeleaf</strong>, <strong>Spring
+                Boot</strong> pour le back-end et <strong>HTML/CSS/JS</strong> pour le front-end, avec une base de
+              données MySQL pour gérer les événements, les utilisateurs et les transactions.
             </p>
+            <h3>Fonctionnalités principales :</h3>
+            <ul>
+              <li><strong>Affichage des événements :</strong> Visualisation des spectacles, lieux et horaires
+                disponibles.</li>
+              <li><strong>Recherche par localisation :</strong> Trouver les événements proches via la géolocalisation.
+              </li>
+              <li><strong>Réservation de tickets :</strong> Achat facile de billets avec paiement sécurisé.</li>
+              <li><strong>Gestion des utilisateurs :</strong> Création de comptes utilisateurs, gestion des profils et
+                des réservations.</li>
+              <li><strong>Interface intuitive :</strong> Un design moderne et réactif avec <strong>Bootstrap</strong> et
+                une navigation simple.</li>
+            </ul>
+            <h3>Technologies utilisées :</h3>
+            <ul>
+              <li><strong>Back-end :</strong> Spring Boot</li>
+              <li><strong>Template Engine :</strong> Thymeleaf</li>
+              <li><strong>Base de données :</strong> MySQL</li>
+              <li><strong>Frontend :</strong> HTML5, CSS3, JavaScript, Bootstrap</li>
+              <li><strong>Fonctionnalité spéciale :</strong> Géolocalisation des événements</li>
+            </ul>
             <p>
-              Ce projet m’a permis de mettre en pratique mes compétences en conception de base de données, architecture
-              MVC, routage, sécurité, ainsi qu’en intégration front-end. Il représente une étape importante dans ma
-              progression en développement web.
+              Cette application a été développée en mettant l’accent sur une <strong>expérience utilisateur fluide et
+                intuitive</strong>. Le design est responsive, permettant à l'utilisateur de réserver des tickets aussi
+              bien depuis un <strong>bureau</strong> que sur un <strong>appareil mobile</strong>.
             </p>
-            <p>
-              🔗 <strong>Code source</strong> : <a href="https://github.com/yaCent100/ProjetSymfony"
-                target="_blank">Voir sur
-                GitHub</a>
-            </p>
+            <p><strong>Code source disponible sur GitHub :</strong> <a
+                href="https://github.com/yaCent100/ProjetReservations" target="_blank">Consulter le dépôt GitHub</a></p>
           </div>
+
+
         </div>
+
 
 
       </div>
@@ -220,11 +238,16 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">IY - Portfolio</strong> <span>All Rights
-            Reserved</span>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span>
         </p>
       </div>
-
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
 
   </footer>
