@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Le workflow sera déclenché lorsqu'il y a un push sur la branche 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Vérifier le code du dépôt
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Configurer Node.js (si nécessaire pour d'autres tâches comme un générateur de site)
+      # Si tu n'as pas besoin de Node.js, tu peux sauter cette étape.
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      # (Optionnel) Si tu utilises un générateur de site comme Jekyll ou un bundler pour ton projet, tu peux installer des dépendances ici.
+      # - name: Install dependencies
+      #   run: npm install
+
+      # Déployer sur GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Utilise le token par défaut de GitHub pour l'authentification
+          publish_dir: ./ # Répertoire racine du site (pour les fichiers statiques HTML)
+          publish_branch: gh-pages # Déploie sur la branche gh-pages (GitHub Pages)
