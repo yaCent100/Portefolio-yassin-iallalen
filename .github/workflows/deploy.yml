@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy static site to GitHub Pages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write  # Important pour pouvoir push sur gh-pages
+  contents: write
 
 jobs:
   deploy:
@@ -14,17 +14,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
+        uses: actions/checkout@v3
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./
           publish_branch: gh-pages
+
