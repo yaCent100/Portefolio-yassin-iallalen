@@ -311,3 +311,22 @@
     /* vert Bootstrap (success) */
     font-size: 1.1rem;
 }
+
+
+
+.btn-message {
+
+    background: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 10px;
+    color: var(--surface-color);
+    border-radius: 5px;
+
+
+}
+
+.btn-message:hover {
+    background: var(--surface-color);
+    color: var(--accent-color);
+
+}
