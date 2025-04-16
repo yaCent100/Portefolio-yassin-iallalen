@@ -344,6 +344,7 @@
     margin: 30px 0 10px;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
 }
 
 .skill-circle {
@@ -374,13 +375,13 @@
     z-index: 0;
 }
 
-.icon,
+.icon-langage,
 .percentage {
     position: absolute;
     z-index: 1;
 }
 
-.icon {
+.icon-langage {
     font-size: 30px;
 }
 
