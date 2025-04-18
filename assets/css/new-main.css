@@ -280,37 +280,118 @@
 
 
 
-
-
-
-
-.custom-list-group .list-group-item {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 0.75rem;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease-in-out;
-    padding: 12px 18px;
-    font-weight: 500;
+/* Style pour les éléments de technologies & environnements */
+.tech-item {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.tech-icon {
+    font-size: 40px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-/* Hover effect */
-.custom-list-group .list-group-item:hover {
-    background-color: #e9ecef;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.tech-name {
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* Icône check */
-.custom-list-group .list-group-item::after {
-    content: "✔";
-    color: #198754;
-    /* vert Bootstrap (success) */
-    font-size: 1.1rem;
+/* Centrage du contenu */
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Pour permettre aux éléments de se réorganiser sur des petits écrans */
 }
+
+/* Style mobile et responsive */
+@media (max-width: 991px) {
+    .col-lg-6 {
+        width: 100%;
+        /* Sur petit écran, chaque colonne prend 100% */
+    }
+
+    .col-md-12 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .tech-item {
+        flex-direction: column;
+        /* Mettre les icônes et noms sur une ligne sur mobile */
+        align-items: center;
+        /* Aligner les éléments au centre */
+    }
+
+    .tech-name {
+        text-align: center;
+        /* Centrer le texte sous l'icône */
+        font-size: 14px;
+    }
+
+    .tech-icon {
+        font-size: 30px;
+        /* Reduire la taille de l'icône sur mobile */
+    }
+}
+
+/* Effet de survol */
+.tech-item:hover .tech-icon {
+    transform: scale(1.1);
+    /* Agrandissement de l'icône au survol */
+}
+
+.tech-item:hover .tech-name {
+    font-size: 18px;
+    color: #000;
+    /* Optionnel, pour changer la couleur du texte au survol */
+}
+
+/* Couleurs spécifiques pour chaque élément */
+.text-danger {
+    color: #e34c26;
+}
+
+/* Rouge Git */
+.text-primary {
+    color: #2965f1;
+}
+
+/* Bleu API REST */
+.text-warning {
+    color: #f7df1e;
+}
+
+/* Jaune Architecture MVC */
+.text-success {
+    color: #28a745;
+}
+
+/* Vert Responsive Design / Android */
+.text-info {
+    color: #17a2b8;
+}
+
+/* Bleu PyCharm / Agile */
+.text-secondary {
+    color: #6c757d;
+}
+
+/* Gris Visual Studio / VS Code */
+.text-dark {
+    color: #343a40;
+}
+
+/* Gris foncé IntelliJ IDEA / Eclipse */
+
+
 
 
 
@@ -330,6 +411,10 @@
     color: var(--accent-color);
 
 }
+
+
+
+
 
 
 
@@ -375,18 +460,18 @@
     z-index: 0;
 }
 
-.icon-langage,
+.icon-language,
 .percentage {
     position: absolute;
     z-index: 1;
 }
 
-.icon-langage {
+.icon-language {
     font-size: 30px;
 }
 
 .percentage {
-    top: 60%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 13px;
@@ -396,6 +481,7 @@
 .label {
     margin-top: 10px;
     font-weight: bold;
+    font-style: italic;
 }
 
 .skills-section-group {
